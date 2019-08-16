@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+  <title>Train Scheduler</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="main-container" class="jumbotron jumbotron-fluid">
+      <div class="container text-white">
+        <h1 class="display-4 text-center">Anytime is Train Time</h1>
+        <p class="lead text-center">Choo Choo. Chee Chee.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table table-dark">
+      <h3>Train Schedule</h3>
+      <thead>
+        <tr>
+          <th scope="col">Train Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Frequency</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Minutes Away</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr> -->
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container">
+      <h3>Add Train</h3>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Train Name</label>
+        <input type="text" class="form-control" id="trainName" aria-describedby="emailHelp"
+          placeholder="Default input">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Destination</label>
+        <input type="text" class="form-control" id="destination" aria-describedby="emailHelp"
+          placeholder="Default input">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">First Train Time (HH:mm - military time)</label>
+        <input type="text" class="form-control" id="trainTime" aria-describedby="emailHelp"
+          placeholder="Default input">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Frequency (min)</label>
+        <input type="text" class="form-control" id="frequency" aria-describedby="emailHelp"
+          placeholder="Default input">
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="submitbtn">Submit</button>
+    </form>
+  </div>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.7.3/localforage.js"></script>
+  <script src="assets/javascript/train.js"></script>
+</body>
+
+</html>
