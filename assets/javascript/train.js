@@ -31,7 +31,7 @@ document.getElementById("submitbtn").addEventListener("click", function (event){
         newArray.push(newTrain)
 
 
-    alert("Train has been added!")
+    alert("A new Train has been added!")
 
     
 
@@ -76,7 +76,7 @@ function newTrainTimes(result){
         thomas.innerHTML += "<tr> <td>" + result[i].name 
         + "</td> <td>" + result[i].destination 
         + "</td> <td>" + result[i].frequency 
-        + "</td> <td>" + nextTrain
+        + "</td> <td>" + nextTrain.format("hh:mm")
          + "</td> <td>" + tMinutesTillTrain
           +"</td> </tr>";
     }};
